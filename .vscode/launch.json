@@ -8,15 +8,9 @@
             "noDebug": false,
             "runtimeArgs": [
                 "-S",
-<<<<<<< HEAD
                 "localhost:8000",
                 "-t",
                 "public/"
-=======
-                "localhost:0",
-                "-t",
-                "public"
->>>>>>> de4c63d (uh)
             ],
             "serverReadyAction": {
                 "action": "openExternally"
