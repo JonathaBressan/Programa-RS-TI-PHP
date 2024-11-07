@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 die(var_dump($data));
+=======
+die(var_dump($data))
+>>>>>>> 80c5a43 (ii)
 ?>
 
 <!DOCTYPE html>

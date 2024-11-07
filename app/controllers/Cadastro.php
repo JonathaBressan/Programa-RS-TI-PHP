@@ -4,6 +4,7 @@ class Cadastro extends Controller {
 
     // Index da página de cadastro (localhost/index.php?url=Cadastro(/index))
     public function index() {
+<<<<<<< HEAD
         // Inicializa a model "Estados"
         $estados = $this->model('Estados');
         // Chama a função getEstados() e salva o resultado SQL
@@ -12,6 +13,15 @@ class Cadastro extends Controller {
 
         // Carrega a view "cadastro/index.php" e passa os Estados
         // a ela 
+=======
+        //$testData = null;
+        $estados = $this->model('Estados');
+
+        $estadosData = $estados->getEstados();
+
+
+
+>>>>>>> 80c5a43 (ii)
         $this->view('cadastro/index', ['estados' => $estadosData]);
     }
 
