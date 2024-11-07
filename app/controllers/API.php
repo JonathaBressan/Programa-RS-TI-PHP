@@ -16,11 +16,12 @@ Class API extends Controller {
     protected $params = [];
 
     public function JSON($controller, $method, ...$params) {
-        //die(var_dump($controller, $method, $params));
+        // die(var_dump($controller, $method, $params));
         $this->controller = $controller;
         $this->method = $method;
         $this->params = $params;
 
+        // Cria uma nova instância da Controller
         require $controller . ".php";
         $this->controller = new $controller;
 
