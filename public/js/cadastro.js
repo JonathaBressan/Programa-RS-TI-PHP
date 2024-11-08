@@ -29,7 +29,7 @@ $(document).ready(function() {
         $("input[name=telefone]").mask(mascara);
     });    
 
-    const urlEstados = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados?orderBy=nome';
+    /*const urlEstados = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados?orderBy=nome';
 
     // Carregar os estados na inicialização
     $.getJSON(urlEstados, function(data) {
@@ -37,7 +37,7 @@ $(document).ready(function() {
             $('#estado').append(`<option value="${estado.sigla}">${estado.nome}</option>`);
 
         });
-    });
+    });*/
 
     $("form").on("submit", function(event){
         $("form input").prop("disabled", false);
@@ -98,8 +98,8 @@ $(document).ready(function() {
         let estadoId = $(this).val(); // Pega o ID do estado selecionado
 
         if (estadoId) {
-            const urlCidades = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${estadoId}/municipios`;
-
+            //const urlCidades = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${estadoId}/municipios`;
+            const urlCidades = `/API/JSON/Cidade/getCidades/${estadoId}`;
             $.getJSON(urlCidades, function(data) {
                 $('#cidade').empty(); // Limpa o select de cidades
                 $('#cidade').append(`<option value="">Selecione a cidade</option>`); // Adiciona a opção padrão
